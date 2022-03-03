@@ -32,6 +32,9 @@
     background-color: red;
 }
 
+.navbar-light .navbar-brand {
+    padding-left: 25px;
+}
 
 
 .row{
@@ -87,3 +90,6 @@ font-family: 'Montserrat', sans-serif;
 
 }
 
+.thumbnail img:hover{
+    display: none;
+}
