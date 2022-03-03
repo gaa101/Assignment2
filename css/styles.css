@@ -1,0 +1,89 @@
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: red; 
+    /* Put color hex code here^ */
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  }
+
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color: red;
+}
+
+
+
+.row{
+    margin-top: 50pt;
+    margin-inline-start: 10pt;
+    margin-inline-end: 10pt;
+}
+
+.accordion{
+    margin-top: 20pt;
+    margin-inline-start: 10pt;
+    margin-inline-end: 10pt;
+}
+
+
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h5{
+font-family: 'Montserrat', sans-serif;
+}
+
+.accordion-body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+
+
+.blockquote{
+    margin-top: 10pt;
+    background-color: rgba(226, 10, 93, 0.26);
+}
+
+.blockquote-footer{
+    background-color: rgba(226, 10, 93, 0.26);
+}
+
+.container-fluid{
+    margin-top: 40pt;
+}
+
+.caption{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding-top: 8pt;
+}
+
+.col-md-4{
+    margin-top: 10pt;
+
+}
+
