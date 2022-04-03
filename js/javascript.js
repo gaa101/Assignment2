@@ -1,5 +1,5 @@
 //- Change the color of an element using .style
-//accordion-button.style.color = red
+accordion-body.color = red
 
 //- Change the font size of an element using .setProperty
 
