@@ -1,7 +1,14 @@
 //- Change the color of an element using .style
-accordion-body.color = red
+const accordion = document.querySelector('.accordion-body')
+accordion.style.background = "#def7ff"
+
+
+/*const myButton = document.querySelector('accordion-button collapsed')
+myButton.style.background = "000" */
+ 
 
 //- Change the font size of an element using .setProperty
+//.accordion-body.setProperty
 
 
 //- Add a class to an HTML tag with .setAttribute, and change some property with that class.
