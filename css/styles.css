@@ -136,3 +136,30 @@ a {
     color: black;
     text-decoration: underline;
 }
+
+
+.singlebutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; 
+}
+
+
+button {
+    color: white;
+    background-color: rgb(103,157,100);
+    
+}
+
+.replaceMeCSS {
+    padding-top: 50pt;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.arrayCSS {
+    padding-top: 50pt;
+    padding-left: 40px;
+    padding-right: 40px;
+}
