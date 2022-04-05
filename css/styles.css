@@ -67,6 +67,12 @@ h1{
     font-family: 'Montserrat', sans-serif;
 }
 
+h2{
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 20px;
+    text-align: center;
+}
+
 h5{
 font-family: 'Montserrat', sans-serif;
 }
@@ -137,13 +143,18 @@ a {
     text-decoration: underline;
 }
 
-
+/* Change color button */
 .singlebutton {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px; 
+    height: 100px; 
 }
+
+.clicked {
+    background-color: #1A62A3;
+}
+
 
 
 button {
@@ -163,3 +174,83 @@ button {
     padding-left: 40px;
     padding-right: 40px;
 }
+
+/* ===================== MODAL =======================  */
+/* Modal */
+.jsModalCss{
+    /*padding-top: -30pt;*/
+    margin-top: -12px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.modal-overlay {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  body.modal-is-open .modal-overlay {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .modal2 {
+    display: grid;
+    place-items: center;
+    position: relative;
+    border-radius: 10px;
+    background-color: #50ABD1;
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.15);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    min-width: 10vmin;
+    min-height: 10vmin;
+    padding: 2.5rem;
+  }
+  
+  .modal__close-button {
+    position: absolute;
+    top: -1em;
+    right: -1em;
+    padding: 0.5rem;
+    font-size: 1.5em;
+    border-radius: 50%;
+    border: 2px solid var(--r-heading-color);
+    background: #1A62A3;
+    color: var(--r-heading-color);
+    opacity: 1;
+  }
+  
+  .modal__close-button button:hover,
+  .modal__close-button:active,
+  .modal__close-button:focus {
+    background: white;
+    border-color: var(--r-heading-color);
+  }
+
+  /* Additional Section */
+
+  .additionalSection {
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  /* ApexCharts =========================  */
+  #chart{
+    max-width: 800px;
+    margin: 25px auto;
+  }
+
+  

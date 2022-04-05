@@ -44,44 +44,123 @@ NewParagraphStyle.style.setProperty('font-weight', '300')
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //- Create an array and display the content on the page.
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const myArrayLong = [
-    "1. Matisse worked as a court administrator<br>",
-    "2. Sickness brought a turnaround in Henri Matisse’s career<br>",
-    "3. He had a love-hate relationship with Pablo Picasso<br>",
-    "4. Matisse is known as the father of Fauvism<br>",
-    "5. Henri Matisse loved African heart<br>",
-    "6. He developed a unique way of painting with scissors<br>",
-    "8. Matisse loved Jazz music<br>",
-    "9. Paul Cezanne’s art inspired Henri Matisse<br>",
-    "10. Matisse loved his pets<br>"
+    "1. Matisse worked as a court administrator",
+    "2. Sickness brought a turnaround in Henri Matisse’s career",
+    "3. He had a love-hate relationship with Pablo Picasso",
+    "4. Matisse is known as the father of Fauvism",
+    "5. Henri Matisse loved African heart",
+    "6. He developed a unique way of painting with scissors",
+    "8. Matisse loved Jazz music",
+    "9. Paul Cezanne’s art inspired Henri Matisse",
+    "10. Matisse loved his pets"
 ]
 console.log(myArrayLong)
 
 const myArrayLongDisplay = document.querySelector("#replaceMeArray")
 console.log(myArrayLongDisplay)
-myArrayLongDisplay.innerHTML = myArrayLong
+myArrayLongDisplay.innerHTML = myArrayLong.join("<br>")
 myArrayLongDisplay.style.setProperty('font-family', 'Montserrat')
 myArrayLongDisplay.style.setProperty('font-weight', '300')
- //*******************************************************************************************************************
-        // WHY are there , in my site?? How do i remove?
- //*******************************************************************************************************************
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //- Create a button and add an event listener to change the background of a section or div.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const myButton = document.querySelector('singlebutton')
+const myButton = document.querySelector('.singlebutton button')
 myButton.addEventListener('click', function () {
-    myButton.style.toggle.background = "#000"
-    myButton.style.color = "#fff"
     myButton.classList.toggle('clicked')
-}
- //*******************************************************************************************************************
-        // WHY can't I change the color of the button when clicked??
- //*******************************************************************************************************************
+})
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //- Select one of the 3 elements implemented in class and integrate it into your page. (Slide Panel, Modal, or Random background). If you use the random background you can apply it to any section. It does not have to be the whole background.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// ==================== Modal ==================== 
+
+const modalButton = document.querySelector('.jsModalButton')
+const modalCloseButton = document.querySelector('.jsModalClose')
+const modalOverlay = document.querySelector('.modal-overlay')
+console.log(modalButton)
+console.log(modalCloseButton)
+console.log(modalOverlay)
+
+modalButton.addEventListener('click', event => {
+  document.body.classList.add('modal-is-open')
+})
+
+modalCloseButton.addEventListener('click', event => {
+  document.body.classList.remove('modal-is-open')
+})
+
+modalOverlay.addEventListener('click', event => {
+  if (!event.target.closest('.modal2')) {
+    document.body.classList.remove('modal-is-open')
+  }
+})
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//JQuery
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//- Replace the HTML content on a paragraph.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//- Create a button and add an event that adds some content at the beginning of a paragraph.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Libraries
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Incorporate one element from one of the following libraries: ApexCharts, Leaflet maps or AOS.
+    // Bonus 10 points : Incorporate all 3 libraries.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// ==================== ApexCharts ==================== 
+var options = {
+    chart: {
+      type: 'line'
+    },
+    series: [{
+      name: 'Artwork made',
+      data: [32,81,145,50,72,108,140,77,23,86,91,50,33]
+    }],
+    xaxis: {
+      categories: ["1890-1894","1895-1900","1901-1905","1906-1910","1911-1915","1916-1920","1921-1925","1926-1930","1931-1935","1936-1940","1941-1945","1946-1950","1951-1954"]
+    }
+  }
+  
+  var chart = new ApexCharts(document.querySelector("#chart"), options);
+  
+  chart.render();
+
+// ==================== Leaflet maps ==================== 
+var map = L.map('map').setView([43.7193868, 2.7938211], 17);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([43.7193868, 2.7938211]).addTo(map)
+    .bindPopup('Musée Matisse')
+    .openPopup();
+
+    var circle = L.circle([43.7193868, 2.7938211], {
+        color: '#1A62A3',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 100
+    }).addTo(map);

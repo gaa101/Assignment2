@@ -14,9 +14,30 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
    
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- ApexCharts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- Aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+     <!-- Leaflet -->
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+     crossorigin=""/>
+         <!-- Make sure you put this AFTER Leaflet's CSS -->
+          <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+          integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+          crossorigin=""></script>
+
     <title>Henri Matisse</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/javascript.js" defer></script>
+   
+
 
   </head>
   <body>
@@ -284,13 +305,53 @@
         
       </p>
 </div>
-    <!-- Button for JavaScript -->
-      <div class="singlebutton">
-        <button>Click me!
-        </button>
-      </div>
 
+ <!-- Modal  -->
+ <div data-aos="fade-right">
+    <div class="jsModalCss">
+      <button class="button jsModalButton">Click Here for a Bonus Fact!</button>
+    </div>
+</div>
+<script>
+  AOS.init();
+</script>
+      <div class="modal-overlay jsModalOverlay">
+        <div class="modal2">
+          <div class="modal__content">
+            <h2>He had a cat!</h2>
+            <p>He was particularly attached to his cats Minouche and Coussi, as well as his black cat named la Puce (the Flea). He even fed them pieces of brioche in the mornings.</p>
+            <button class="modal__close-button jsModalClose">
+              <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+ <!-- End of Modal  -->
    
+<!-- Button for JavaScript -->
+  <div class="singlebutton">
+    <button>Click here to change to Matisse's most used color!
+    </button>
+  </div>
+
+
+
+<!-- Additional -->
+  <div class="additionalSection">
+    <h1>Additional Information</h1>
+    <!-- ApexCharts -->
+      <h2>Total Artworks Made per Quinquennial</h2>
+        <div id="chart"></div>
+
+    <!-- Leaflet -->
+    <h2> Matisse Museum</h2>
+    <div id="map"></div>
+  </div>
+    
+
+
+
+
     
     <!-- Optional JavaScript; choose one of the two! -->
 
