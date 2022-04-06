@@ -253,4 +253,8 @@ button {
     margin: 25px auto;
   }
 
+  /* Leaflet =========================  */
+  #map { 
+      height: 180px; 
+    }
   
