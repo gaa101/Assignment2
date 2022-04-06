@@ -239,6 +239,10 @@ button {
     border-color: var(--r-heading-color);
   }
 
+#jqAdd{
+    text-align: center;
+}
+
   /* Additional Section */
 
   .additionalSection {
@@ -255,6 +259,7 @@ button {
 
   /* Leaflet =========================  */
   #map { 
-      height: 180px; 
+      height: 800px; 
+      margin: 25px auto;
     }
   
